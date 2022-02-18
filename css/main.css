@@ -1,0 +1,87 @@
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: serif;
+    font-weight: normal;
+    text-decoration: none;
+    color: #000;
+}
+
+header {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+}
+
+header ul {
+    display: flex;
+}
+.site-ttl {
+  padding: 14px 25px 14px 50px;
+}
+.nav-contents {
+    display: inline-block;
+    line-height: 64px;
+    padding: 0 25px;
+    ruby-position: under;
+    font-size: 16px;
+}
+
+.ruby-pos {
+    text-align: center;
+    ruby-position: under;
+    display: none;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    /* bottom: -10px; */
+    transform: translateY(5px);
+}
+
+.nav-contents:hover .ruby-pos {
+    display: block;
+}
+
+.section {
+    padding: 56px 100px 0;
+    /* margin-top: -100px; */
+    text-align: center;
+}
+.section-ttl {
+    font-weight: normal;
+    font-size: 32px;
+    padding: 20px 0 20px;
+    /* position: relative; */
+    /* border-top: 6px solid #ccc; */
+}
+.section-ttl-sup {
+    font-size: 16px;
+    vertical-align: middle;
+    opacity: 0.7;
+}
+
+#about {
+    height: 500px;
+    background-color: #fff;
+    /* padding-top: 56px; */
+}
+#skill {
+    height: 500px;
+    background-color: #000;
+}
+#work {
+    height: 500px;
+    background-color: #fff;
+}
+#contact {
+    height: 500px;
+    background-color: #000;
+}
+
+#skill .section-ttl, #skill .section-ttl-sup{
+    color: #fff;
+}
+#contact .section-ttl, #contact .section-ttl-sup{
+    color: #fff;
+}
