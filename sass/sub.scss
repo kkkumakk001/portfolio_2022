@@ -1,0 +1,152 @@
+$breakpoints: (
+    sps: "only screen and (max-width: 479px)",
+    spl: "only screen and (max-width: 599px)",
+    tab: "only screen and (max-width: 768px)",
+    // pc: "only screen and (max-width: 320px)"
+);
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+header {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+    nav {
+        position: relative;
+    }
+    ul {
+        display: flex;
+    }
+    li {
+        @include media(tab) {
+            &:not(:first-child) {
+                display: none;
+            }
+        }
+    }
+    .nav-contents {
+        display: inline-block;
+        line-height: 64px;
+        padding: 0 25px;
+        ruby-position: under;
+        font-size: 16px;
+        &:hover .ruby-pos {
+            display: block;
+        }
+    }
+    .icon-github {
+        position: absolute;
+        top: 16px;
+        right: 64px;
+    }
+}
+.site-ttl {
+  padding: 14px 25px 14px 50px;
+}
+.ruby-pos {
+    text-align: center;
+    ruby-position: under;
+    display: none;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    transform: translateY(5px);
+}
+.section {
+    padding: 56px 100px 0px;
+    @include media(tab) {
+        padding: 56px 50px 0px;
+    }
+    text-align: center;
+    &-ttl {
+        font-weight: normal;
+        font-size: 32px;
+        padding: 20px 0 50px;
+    }
+    &-ttl-sup {
+        font-size: 16px;
+        vertical-align: middle;
+        opacity: 0.7;
+    }
+}
+#about {
+    // height: 1000px;
+    background-color: #fff;
+    padding-top: 100px;
+}
+#skill {
+    // height: 500px;
+}
+#work {
+    // height: 500px;
+    background-color: #fff;
+}
+#question {
+    height: 400px;
+}
+#contact {
+    padding-bottom: 30px;
+}
+
+/* ------------- */
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+#work .flex-wrap {
+    padding-bottom: 200px;
+    &:first:child {
+        padding-bottom: 200px;
+    }
+}
+.flex-item {
+    width: 50%;
+    // padding: 20px 20px 100px;
+    // border: 1px solid #000;
+}
+.about {
+    &-img, &-des {
+      width: 50%;
+      @include media(spl) {
+          width: 100%;
+      }
+    }
+    img {
+        width: 240px;
+        height: 240px;
+    }
+    &-des {
+        text-align: left;
+        padding-top: 20px;
+        @include media(spl) {
+            padding: 20px 50px 0px;
+        }
+    }
+}
+
+/* --------------- */
+.skill {
+    &-item {
+        width: 50%;
+        padding: 20px 0 50px;
+        @include media(spl) {
+            width: 100%;
+            &:last:child {
+                padding: 20px 0 0;
+            }
+        }
+    }
+    &-des {
+        text-align: left;
+        padding: 20px 50px 0px;
+    }
+}
+
+.github-btn {
+    border: 2px solid #333;
+    padding: 5px;
+}

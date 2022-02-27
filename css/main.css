@@ -6,82 +6,172 @@
     font-weight: normal;
     text-decoration: none;
     color: #000;
+    box-sizing: border-box;
 }
 
-header {
-    position: fixed;
-    background-color: #fff;
-    width: 100%;
+p {
+    line-height: 2;
 }
 
-header ul {
-    display: flex;
-}
-.site-ttl {
-  padding: 14px 25px 14px 50px;
-}
-.nav-contents {
-    display: inline-block;
-    line-height: 64px;
-    padding: 0 25px;
-    ruby-position: under;
-    font-size: 16px;
-}
 
-.ruby-pos {
-    text-align: center;
-    ruby-position: under;
-    display: none;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
+/* ----------- */
+.accordion {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .accordion__item {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .accordion__title {
     position: relative;
-    /* bottom: -10px; */
-    transform: translateY(5px);
-}
-
-.nav-contents:hover .ruby-pos {
+    padding: 15px 60px 15px 20px;
+    cursor: pointer;
+    color: #000;
+  }
+  .accordion__title::before,
+  .accordion__title::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    background-color: #000;
+    width: 15px;
+    height: 1px;
+    transition: all 1s;
+  }
+  .accordion__title::after {
+    transform: rotate(90deg);
+  }
+  .accordion__content {
+    padding: 0 20px 15px 20px;
+    display: none;
+    cursor: pointer;
+    color: #000;
+  }
+  .accordion__content.is-open {
     display: block;
-}
+  }
+  .accordion__item.is-active .accordion__title::before {
+    transform: rotate(180deg);
+  }
+  .accordion__item.is-active .accordion__title::after {
+    transform: rotate(180deg);
+    opacity: 0;
+  }
 
-.section {
-    padding: 56px 100px 0;
-    /* margin-top: -100px; */
-    text-align: center;
-}
-.section-ttl {
-    font-weight: normal;
-    font-size: 32px;
-    padding: 20px 0 20px;
-    /* position: relative; */
-    /* border-top: 6px solid #ccc; */
-}
-.section-ttl-sup {
-    font-size: 16px;
-    vertical-align: middle;
-    opacity: 0.7;
-}
+  .icon-img {
+    width: 160px;
+    height: 160px;
+  }
+  .icon-github {
+      width: 32px;
+      height: 32px;
+  }
 
-#about {
-    height: 500px;
-    background-color: #fff;
-    /* padding-top: 56px; */
+  .fuwa {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: all 1s;
+  }
+  .fuwa.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
+
+  .work-img {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    width: 240px;
+    max-width: 240px;
+    height: 133px;
+  }
+
+  #hamburger {
+    z-index: 1000;
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: 1s;
 }
-#skill {
-    height: 500px;
+.inner_line {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
     background-color: #000;
+    transition: 1s;
+    border-radius: 4px;
 }
-#work {
-    height: 500px;
-    background-color: #fff;
+.line1 {
+    top: 6px;
 }
-#contact {
-    height: 500px;
-    background-color: #000;
+.line2 {
+    top: 11px;
+}
+.line3 {
+    bottom: 6px;
+}
+.line4 {
+    top: 11px;
+}
+.line5 {
+    top: 11px;
+}
+.line_1,.line_2,.line_3, .line_4, .line_5{
+    background: #000000;
+  }
+.line_1, .line_2, .line_3 {
+    opacity: 0;
+}
+.line_4 {
+    transform: rotate(-45deg);
+}
+.line_5 {
+    transform: rotate(45deg);
 }
 
-#skill .section-ttl, #skill .section-ttl-sup{
+#nav-menu {
+    position: absolute;
+    top: -100vh;
+    /*ナビメニューを左に隠した状態になる*/
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    /*０.7秒かけてナビメニューがスライドする*/
+    transition: .7s;
+}
+#nav-menu.in{
+    /* transform: translateX(100%); */
+    top: 0;
+  }
+#nav-menu ul{
+    padding-top: 80px;
+}
+#nav-menu ul li{
+    list-style-type: none;
+    font-size: 20px;
     color: #fff;
 }
-#contact .section-ttl, #contact .section-ttl-sup{
-    color: #fff;
+#nav-menu a{
+    display: block;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px;
+    transition: .5s;
+}
+#nav-menu li a:hover{
+    color: #ffffff;
+    background: #cd5c5c;
+    border-bottom: none;
 }

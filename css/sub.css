@@ -1,0 +1,145 @@
+header {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 10;
+}
+header nav {
+  position: relative;
+}
+header ul {
+  display: flex;
+}
+@media only screen and (max-width: 768px) {
+  header li:not(:first-child) {
+    display: none;
+  }
+}
+header .nav-contents {
+  display: inline-block;
+  line-height: 64px;
+  padding: 0 25px;
+  ruby-position: under;
+  font-size: 16px;
+}
+header .nav-contents:hover .ruby-pos {
+  display: block;
+}
+header .icon-github {
+  position: absolute;
+  top: 16px;
+  right: 64px;
+}
+
+.site-ttl {
+  padding: 14px 25px 14px 50px;
+}
+
+.ruby-pos {
+  text-align: center;
+  ruby-position: under;
+  display: none;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  transform: translateY(5px);
+}
+
+.section {
+  padding: 56px 100px 0px;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .section {
+    padding: 56px 50px 0px;
+  }
+}
+.section-ttl {
+  font-weight: normal;
+  font-size: 32px;
+  padding: 20px 0 50px;
+}
+.section-ttl-sup {
+  font-size: 16px;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+#about {
+  background-color: #fff;
+  padding-top: 100px;
+}
+
+#work {
+  background-color: #fff;
+}
+
+#question {
+  height: 400px;
+}
+
+#contact {
+  padding-bottom: 30px;
+}
+
+/* ------------- */
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#work .flex-wrap {
+  padding-bottom: 200px;
+}
+#work .flex-wrap:first:child {
+  padding-bottom: 200px;
+}
+
+.flex-item {
+  width: 50%;
+}
+
+.about-img, .about-des {
+  width: 50%;
+}
+@media only screen and (max-width: 599px) {
+  .about-img, .about-des {
+    width: 100%;
+  }
+}
+.about img {
+  width: 240px;
+  height: 240px;
+}
+.about-des {
+  text-align: left;
+  padding-top: 20px;
+}
+@media only screen and (max-width: 599px) {
+  .about-des {
+    padding: 20px 50px 0px;
+  }
+}
+
+/* --------------- */
+.skill-item {
+  width: 50%;
+  padding: 20px 0 50px;
+}
+@media only screen and (max-width: 599px) {
+  .skill-item {
+    width: 100%;
+  }
+  .skill-item:last:child {
+    padding: 20px 0 0;
+  }
+}
+.skill-des {
+  text-align: left;
+  padding: 20px 50px 0px;
+}
+
+.github-btn {
+  border: 2px solid #333;
+  padding: 5px;
+}

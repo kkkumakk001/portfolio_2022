@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sub.css">
 </head>
 <body>
     <header>
@@ -21,48 +23,159 @@
                     <a href="#work"><ruby>Work<rt class="ruby-pos">作品</rt></ruby></a>
                 </li> 
                 <li class="nav-contents">
+                    <a href="#question"><ruby>Q&A<rt class="ruby-pos">質問</rt></ruby></a>
+                </li> 
+                <li class="nav-contents">
                     <a href="#contact"><ruby>Contact<rt class="ruby-pos">連絡先</rt></ruby></a>
                 </li> 
             </ul>
+            <a href="https://github.com/kkkumakk001" target="_blank">
+                <img class="icon-github" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">
+            </a>
         </nav>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#">sample1</a></li>
+                <li><a href="#">sample2</a></li>
+                <li><a href="#">sample3</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger">
+            <!-- 1番上の線 -->
+            <span class="inner_line line1" id="line1"></span>
+            <!-- 真ん中の線 -->
+            <span class="inner_line line2" id="line2"></span>
+            <!-- 1番下の線 -->
+            <span class="inner_line line3" id="line3"></span>
+            <span class="inner_line line4" id="line4"></span>
+            <span class="inner_line line5" id="line5"></span>
+        </div>
     </header><!-- headerセクション終わり -->
 
+    
 
-
-    <div id="carousel">
-
-    </div><!-- carouselセクション終わり -->
 
 
 
 
     <div id="about" class="section">
         <h2 class="section-ttl">About | <span class="section-ttl-sup">私について</span></h2>
+        <div class="flex-wrap">
+            <div class="about-img">
+                <img src="img/person.png" alt="">
+            </div>
+            <div class="about-des">
+                <p>1996.10.02<br>
+                webを独学し、現在就職活動中。<br>
+                iPhoneの特設サイトのアニメーションに魅了され、フロントエンドエンジニアを志す。
+                </p>
+            </div>
+        </div>
     </div><!-- aboutセクション終わり -->
 
 
 
 
-    <div id="skill" class="section">
+    <div id="skill" class="section fuwa">
         <h2 class="section-ttl">Skill | <span class="section-ttl-sup">技術</span></h2>
+        <div class="flex-wrap">
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <p>SASS</p>
+                    <img class="icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+                </div>
+                <div class="skill-des">
+                    <p>SASSの説明ですSASSの説明ですSASSの説明ですSASSの説明ですSASSの説明ですSASSの説明ですSASSの説明ですSASSの説明ですSASSの説明ですSASSの説明です</p>
+                </div>
+            </div><!-- skill-item -->
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <p>GitHub</p>
+                    <img class="icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                </div>
+                <div class="skill-des">
+                    <p>GitHubの説明ですGitHubの説明ですGitHubの説明ですGitHubの説明ですGitHubの説明ですGitHubの説明ですGitHubの説明ですGitHubの説明ですGitHubの説明ですGitHubの説明です</p>
+                </div>
+            </div><!-- skill-item -->
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <p>JavaScript</p>
+                    <img class="icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                </div>
+                <div class="skill-des">
+                    <p>JavaScriptの説明ですJavaScriptの説明ですJavaScriptの説明ですJavaScriptの説明ですJavaScriptの説明ですJavaScriptの説明ですJavaScriptの説明ですJavaScriptの説明ですJavaScriptの説明ですJavaScriptの説明です</p>
+                </div>
+            </div><!-- skill-item -->
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <p>Vue.js</p>
+                    <img class="icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" />
+                </div>
+                <div class="skill-des">
+                    <p>Vue.jsの説明ですVue.jsの説明ですVue.jsの説明ですVue.jsの説明ですVue.jsの説明ですVue.jsの説明ですVue.jsの説明ですVue.jsの説明ですVue.jsの説明ですVue.jsの説明です</p>
+                </div>
+            </div><!-- skill-item -->
+        </div><!-- flex-wrap -->
     </div><!-- skillセクション終わり -->
 
 
 
 
-    <div id="work" class="section">
+    <div id="work" class="section fuwa">
         <h2 class="section-ttl">Work | <span class="section-ttl-sup">作品</span></h2>
+        <div class="flex-wrap">
+            <div class="flex-item">
+                <img id ="work-img" class="work-img" src="img/portfolio_pc.png" alt="">
+                <p>ポートフォリオサイト</p>
+            </div>
+            <div class="flex-item">
+                <p>ポートフォリオサイトの説明です</p>
+                <a class="github-btn" href="#">Github</a>
+            </div>
+        </div>
+        <div class="flex-wrap">
+            <div class="flex-item">
+                <p>ニュース検索サイトの説明です</p>
+                <a class="github-btn" href="#">Github</a>
+            </div>
+            <div class="flex-item">
+                <img class="work-img" src="img/news_search.png" alt="">
+                <p>ニュース検索サイト</p>
+            </div>
+        </div>
+        <!-- <img class="work-img" src="img/portfolio_sp.png" alt=""> -->
     </div><!-- workセクション終わり -->
 
 
 
 
-    <div id="contact" class="section">
+    
+    <div id="question" class="section fuwa">
+        <h2 class="section-ttl">Q & A | <span class="section-ttl-sup">よくあるご質問</span></h2>
+        <dl class="accordion js-accordion">
+            <div class="accordion__item js-accordion-trigger">
+                <dt class="accordion__title">なぜwebに興味を持ったのか？</dt>
+                <dd class="accordion__content">答え</dd>
+            </div>
+            <div class="accordion__item js-accordion-trigger">
+                <dt class="accordion__title">どうしてフロントエンドなのか？</dt>
+                <dd class="accordion__content">答え</dd>
+            </div>
+            <div class="accordion__item js-accordion-trigger">
+                <dt class="accordion__title">キャリアプラン</dt>
+                <dd class="accordion__content">答え</dd>
+            </div>
+        </dl>
+    </div><!-- Q&A -->
+    
+    
+    
+    <div id="contact" class="section fuwa">
         <h2 class="section-ttl">Contact | <span class="section-ttl-sup">ご連絡はこちらから</span></h2>
+            <a href="mailto:kk.10.kuma.kk@gmail.com">
+                <img src="img/Gmail_29991.png" alt="">
+            </a>
     </div><!-- contactセクション終わり -->
-
-
-
 
     
 <script src="js/main.js"></script>    
