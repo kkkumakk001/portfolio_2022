@@ -1,10 +1,6 @@
 'use strict';
 
-/* =================================================== */
-// slideUp, slideDown, slideToggle関数を定義
-/* =================================================== */
-
-// 要素をスライドしながら非表示にする関数(jQueryのslideUpと同じ)
+// アコーディオン
 const slideUp = (el, duration = 300) => {
     el.style.height = el.offsetHeight + "px";
     el.offsetHeight;
@@ -32,7 +28,6 @@ const slideUp = (el, duration = 300) => {
     }, duration);
   };
   
-  // 要素をスライドしながら表示する関数(jQueryのslideDownと同じ)
   const slideDown = (el, duration = 300) => {
     el.classList.add("is-open");
     el.style.removeProperty("display");
@@ -66,7 +61,6 @@ const slideUp = (el, duration = 300) => {
     }, duration);
   };
   
-  // 要素をスライドしながら交互に表示/非表示にする関数(jQueryのslideToggleと同じ)
   const slideToggle = (el, duration = 600) => {
     if (window.getComputedStyle(el).display === "none") {
       return slideDown(el, duration);
@@ -74,46 +68,31 @@ const slideUp = (el, duration = 300) => {
       return slideUp(el, duration);
     }
   };
-  
-  /* =================================================== */
-  // DOM操作
-  /* =================================================== */
-  
-  // アコーディオンを全て取得
   const accordions = document.querySelectorAll(".js-accordion");
-  // 取得したアコーディオンをArrayに変換(IE対策)
   const accordionsArr = Array.prototype.slice.call(accordions);
   
   accordionsArr.forEach((accordion) => {
-    // Triggerを全て取得
+ 
     const accordionTriggers = accordion.querySelectorAll(".js-accordion-trigger");
-    // TriggerをArrayに変換(IE対策)
     const accordionTriggersArr = Array.prototype.slice.call(accordionTriggers);
   
     accordionTriggersArr.forEach((trigger) => {
-      // Triggerにクリックイベントを付与
       trigger.addEventListener("click", (e) => {
         accordionTriggersArr.forEach((trigger) => {
-          // クリックしたアコーディオン以外を全て閉じる
           if (trigger !== e.target.parentElement) {
             trigger.classList.remove("is-active");
-            const openedContent = trigger.querySelector(".accordion__content");
+            const openedContent = trigger.querySelector(".accordion-content");
             slideUp(openedContent);
           }
         });
-  
-        // '.is-active'クラスを付与or削除
         trigger.classList.toggle("is-active");
-        // 開閉させる要素を取得
-        const content = trigger.querySelector(".accordion__content");
-        // 要素を展開or閉じる
+        const content = trigger.querySelector(".accordion-content");
         slideToggle(content);
       });
     });
+
+
   });
-
-
-
 
   function showElementAnimation() {
     const elements = document.getElementsByClassName('fuwa');
@@ -123,13 +102,11 @@ const slideUp = (el, duration = 300) => {
     const windowH = window.innerHeight;
   
     for (let i=0;i<elements.length;i++) {
-      // 要素の寸法と、そのビューポートに対する位置を取得
       const clientRect = elements[i].getBoundingClientRect();
       const elemY = scrollY + clientRect.top;
       if(scrollY + windowH - showTiming > elemY) {
         elements[i].classList.add('show');
       } else if(scrollY + windowH < elemY) {
-        // スクロールを上に戻して再度非表示にする場合はこちらを記述
         elements[i].classList.remove('show');
       }
     }
@@ -139,6 +116,7 @@ const slideUp = (el, duration = 300) => {
 
 
 
+// ハンバーガーメニュー
   function hamburger() {
     document.getElementById('line1').classList.toggle('line_1');
     document.getElementById('line2').classList.toggle('line_2');

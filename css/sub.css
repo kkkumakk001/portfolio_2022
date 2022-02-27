@@ -26,6 +26,8 @@ header .nav-contents:hover .ruby-pos {
   display: block;
 }
 header .icon-github {
+  width: 32px;
+  height: 32px;
   position: absolute;
   top: 16px;
   right: 64px;

@@ -8,14 +8,11 @@
     color: #000;
     box-sizing: border-box;
 }
-
 p {
     line-height: 2;
 }
-
-
 /* ----------- */
-.accordion {
+/* .accordion {
     max-width: 600px;
     margin: 0 auto;
   }
@@ -61,17 +58,12 @@ p {
   .accordion__item.is-active .accordion__title::after {
     transform: rotate(180deg);
     opacity: 0;
-  }
+  } */
 
   .icon-img {
     width: 160px;
     height: 160px;
   }
-  .icon-github {
-      width: 32px;
-      height: 32px;
-  }
-
   .fuwa {
     opacity: 0;
     visibility: hidden;
@@ -83,7 +75,6 @@ p {
     visibility: visible;
     transform: translateX(0px);
   }
-
   .work-img {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
     width: 240px;
@@ -93,7 +84,7 @@ p {
 
   #hamburger {
     z-index: 1000;
-    display: block;
+    display: none;
     position: absolute;
     top: 22px;
     right: 16px;
@@ -101,6 +92,11 @@ p {
     height: 24px;
     cursor: pointer;
     transition: 1s;
+}
+@media screen and (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
 }
 .inner_line {
     display: block;
@@ -143,16 +139,13 @@ p {
 #nav-menu {
     position: absolute;
     top: -100vh;
-    /*ナビメニューを左に隠した状態になる*/
     left: 0%;
     width: 100%;
     height: 100vh;
     background: #fff;
-    /*０.7秒かけてナビメニューがスライドする*/
     transition: .7s;
 }
 #nav-menu.in{
-    /* transform: translateX(100%); */
     top: 0;
   }
 #nav-menu ul{

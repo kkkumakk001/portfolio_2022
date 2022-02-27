@@ -39,6 +39,8 @@ header {
         }
     }
     .icon-github {
+        width: 32px;
+        height: 32px;
         position: absolute;
         top: 16px;
         right: 64px;
@@ -145,7 +147,6 @@ header {
         padding: 20px 50px 0px;
     }
 }
-
 .github-btn {
     border: 2px solid #333;
     padding: 5px;
