@@ -114,22 +114,6 @@ const slideUp = (el, duration = 300) => {
   showElementAnimation();
   window.addEventListener('scroll', showElementAnimation);
 
-
-
-// ハンバーガーメニュー
-  // function hamburger() {
-  //   document.getElementById('line1').classList.toggle('line_1');
-  //   document.getElementById('line2').classList.toggle('line_2');
-  //   document.getElementById('line3').classList.toggle('line_3');
-  //   document.getElementById('line4').classList.toggle('line_4');
-  //   document.getElementById('line5').classList.toggle('line_5');
-  //   document.getElementById('nav-menu').classList.toggle('in');
-  // }
-  // document.getElementById('hamburger').addEventListener('click' , function () {
-  //   hamburger();
-  // } );
-
-
 document.addEventListener('DOMContentLoaded', ()=> {
   const hamIcon = document.getElementById('hamburger');
   const navMenu = document.getElementById('nav-menu');
