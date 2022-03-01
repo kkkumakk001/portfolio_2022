@@ -4,20 +4,20 @@ header {
   width: 100%;
   z-index: 10;
 }
-header nav {
+header nav#nav-menu-pc {
   position: relative;
 }
-header ul {
+header nav#nav-menu-pc ul {
   display: flex;
 }
 @media only screen and (max-width: 768px) {
-  header li:not(:first-child) {
+  header nav#nav-menu-pc li:not(:first-child) {
     display: none;
   }
 }
 header .nav-contents {
   display: inline-block;
-  line-height: 64px;
+  line-height: 52px;
   padding: 0 25px;
   ruby-position: under;
   font-size: 16px;
@@ -29,12 +29,22 @@ header .icon-github {
   width: 32px;
   height: 32px;
   position: absolute;
-  top: 16px;
-  right: 64px;
+  top: 10px;
+  right: 10px;
+}
+@media only screen and (max-width: 768px) {
+  header .icon-github {
+    right: 64px;
+  }
 }
 
 .site-ttl {
   padding: 14px 25px 14px 50px;
+}
+@media only screen and (max-width: 599px) {
+  .site-ttl {
+    padding-left: 14px;
+  }
 }
 
 .ruby-pos {
@@ -45,6 +55,53 @@ header .icon-github {
   color: rgba(0, 0, 0, 0.7);
   position: relative;
   transform: translateY(5px);
+}
+
+#nav-menu {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  height: 100vh;
+  background: rgba(238, 238, 238, 0.9);
+  transition: 0.7s;
+  text-align: center;
+}
+#nav-menu.in {
+  right: 0;
+}
+#nav-menu ul {
+  padding-top: 80px;
+}
+#nav-menu li {
+  list-style-type: none;
+  font-size: 20px;
+  color: #fff;
+}
+#nav-menu li:not(:first-child) {
+  padding-top: 20px;
+}
+#nav-menu a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 0px;
+  transition: 0.5s;
+  position: relative;
+}
+#nav-menu a::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: rgba(45, 45, 45, 0.8);
+  bottom: 0px;
+  right: 25%;
+  width: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+#nav-menu a:hover::after {
+  width: 50%;
 }
 
 .section {
@@ -90,15 +147,33 @@ header .icon-github {
   flex-wrap: wrap;
 }
 
-#work .flex-wrap {
-  padding-bottom: 200px;
+.flex-wrap-rev {
+  display: flex;
+  flex-wrap: wrap;
 }
-#work .flex-wrap:first:child {
-  padding-bottom: 200px;
+@media only screen and (max-width: 599px) {
+  .flex-wrap-rev {
+    flex-direction: column-reverse;
+  }
+}
+
+#work .flex-wrap {
+  padding-bottom: 100px;
 }
 
 .flex-item {
   width: 50%;
+}
+@media only screen and (max-width: 599px) {
+  .flex-item {
+    width: 100%;
+  }
+}
+.flex-item-des {
+  padding-top: 30px;
+}
+.flex-item-des p {
+  padding-bottom: 15px;
 }
 
 .about-img, .about-des {
@@ -138,7 +213,12 @@ header .icon-github {
 }
 .skill-des {
   text-align: left;
-  padding: 20px 50px 0px;
+  padding: 20px 20px 0px;
+}
+@media only screen and (max-width: 599px) {
+  .skill-des {
+    padding: 20px 80px 0px;
+  }
 }
 
 .github-btn {

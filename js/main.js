@@ -117,15 +117,42 @@ const slideUp = (el, duration = 300) => {
 
 
 // ハンバーガーメニュー
-  function hamburger() {
-    document.getElementById('line1').classList.toggle('line_1');
-    document.getElementById('line2').classList.toggle('line_2');
-    document.getElementById('line3').classList.toggle('line_3');
-    document.getElementById('line4').classList.toggle('line_4');
-    document.getElementById('line5').classList.toggle('line_5');
-    document.getElementById('nav-menu').classList.toggle('in');
-  }
-  document.getElementById('hamburger').addEventListener('click' , function () {
-    hamburger();
-  } );
+  // function hamburger() {
+  //   document.getElementById('line1').classList.toggle('line_1');
+  //   document.getElementById('line2').classList.toggle('line_2');
+  //   document.getElementById('line3').classList.toggle('line_3');
+  //   document.getElementById('line4').classList.toggle('line_4');
+  //   document.getElementById('line5').classList.toggle('line_5');
+  //   document.getElementById('nav-menu').classList.toggle('in');
+  // }
+  // document.getElementById('hamburger').addEventListener('click' , function () {
+  //   hamburger();
+  // } );
 
+
+document.addEventListener('DOMContentLoaded', ()=> {
+  const hamIcon = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  
+  addEventListener('click', (e) => {
+    if(e.target == hamIcon) {
+      navMenu.classList.toggle('in');
+      document.getElementById('line1').classList.toggle('line_1');
+      document.getElementById('line2').classList.toggle('line_2');
+      document.getElementById('line3').classList.toggle('line_3');
+      document.getElementById('line4').classList.toggle('line_4');
+      document.getElementById('line5').classList.toggle('line_5');
+      console.log('開く通ってる')
+    } else if(e.target != navMenu && navMenu.classList.contains('in') == true) {
+      navMenu.classList.remove('in');
+      document.getElementById('line1').classList.toggle('line_1');
+      document.getElementById('line2').classList.toggle('line_2');
+      document.getElementById('line3').classList.toggle('line_3');
+      document.getElementById('line4').classList.toggle('line_4');
+      document.getElementById('line5').classList.toggle('line_5');
+      console.log('閉じる通ってる')
+    }
+  })
+
+  
+});
