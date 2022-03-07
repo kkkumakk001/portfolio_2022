@@ -90,13 +90,11 @@ const slideUp = (el, duration = 300) => {
         slideToggle(content);
       });
     });
-
-
   });
 
+//ふわっとさせるやつ
   function showElementAnimation() {
     const elements = document.getElementsByClassName('fuwa');
-  
     const showTiming = window.innerHeight > 768 ? 200 : 50; 
     const scrollY = window.pageYOffset;
     const windowH = window.innerHeight;
@@ -111,9 +109,12 @@ const slideUp = (el, duration = 300) => {
       }
     }
   }
+
   showElementAnimation();
   window.addEventListener('scroll', showElementAnimation);
 
+
+//ハンバーガーメニュー(範囲外クリックで閉じる)
 document.addEventListener('DOMContentLoaded', ()=> {
   const hamIcon = document.getElementById('hamburger');
   const navMenu = document.getElementById('nav-menu');
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
       document.getElementById('line3').classList.toggle('line_3');
       document.getElementById('line4').classList.toggle('line_4');
       document.getElementById('line5').classList.toggle('line_5');
-      console.log('開く通ってる')
+      // console.log('開く通ってる')
     } else if(e.target != navMenu && navMenu.classList.contains('in') == true) {
       navMenu.classList.remove('in');
       document.getElementById('line1').classList.toggle('line_1');
@@ -134,9 +135,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
       document.getElementById('line3').classList.toggle('line_3');
       document.getElementById('line4').classList.toggle('line_4');
       document.getElementById('line5').classList.toggle('line_5');
-      console.log('閉じる通ってる')
+      // console.log(e.target)
     }
-  })
-
-  
+  });
 });
