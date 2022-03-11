@@ -228,10 +228,15 @@ header {
         }
     }
     &-des {
-        text-align: left;
         padding: 20px 20px 0px;
         margin: 0 auto;
         max-width: 400px;
+        & p {
+            text-align: left;
+        }
+        &-github {
+            padding-bottom: 20px;
+        }
         @include media(spl) {
             padding: 20px 10px 0px;
         }
