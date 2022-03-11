@@ -113,7 +113,9 @@ header {
 // header
 
 .section {
+    // max-width: 1200px;
     padding: 56px 100px 0px;
+    margin: 0 auto;
     @include media(tab) {
         padding: 56px 50px 0px;
     }
@@ -130,12 +132,12 @@ header {
     }
 }
 #about {
-    background-color: #fff;
-    padding-top: 100px;
+    // background-color: rgb(247, 247, 247);
+    padding: 100px 50px 50px;
 }
 #work {
-    background-color: #fff;
-    padding-top: 85px;
+    background-color: rgba(194, 224, 245, 0.5);
+    padding: 85px 50px 50px;
 }
 #question {
     height: 400px;
@@ -148,6 +150,14 @@ header {
     display: flex;
     flex-wrap: wrap;
 }
+#about .flex-wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+#skill .flex-wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+}
 .flex-wrap-rev {
     display: flex;
     flex-wrap: wrap;
@@ -155,6 +165,7 @@ header {
         flex-direction: column-reverse;
     }
 }
+/* --------------- */
 #work .flex-wrap {
     margin-bottom: 150px;
 }
@@ -167,9 +178,17 @@ header {
         width: 100%;
     }
     &-des {
-        padding-top: 30px;
         & p {
             padding-bottom: 15px;
+            text-align: left;
+            @include media(spl) {
+                padding: 0 30px 15px;
+            }
+        }
+        & p.flex-item-ttl {
+            text-align: center;
+            text-decoration: underline;
+            padding-bottom: 0;
         }
     }
 }
@@ -192,7 +211,7 @@ header {
         text-align: left;
         padding-top: 20px;
         @include media(spl) {
-            padding: 20px 50px 0px;
+            padding: 20px 20px 0px;
         }
     }
 }
@@ -212,8 +231,10 @@ header {
     &-des {
         text-align: left;
         padding: 20px 20px 0px;
+        margin: 0 auto;
+        max-width: 400px;
         @include media(spl) {
-            padding: 20px 80px 0px;
+            padding: 20px 30px 0px;
         }
     }
 }

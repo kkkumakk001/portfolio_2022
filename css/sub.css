@@ -106,6 +106,7 @@ header .icon-github {
 
 .section {
   padding: 56px 100px 0px;
+  margin: 0 auto;
   text-align: center;
 }
 @media only screen and (max-width: 768px) {
@@ -125,13 +126,12 @@ header .icon-github {
 }
 
 #about {
-  background-color: #fff;
-  padding-top: 100px;
+  padding: 100px 50px 50px;
 }
 
 #work {
-  background-color: #fff;
-  padding-top: 85px;
+  background-color: rgba(194, 224, 245, 0.5);
+  padding: 85px 50px 50px;
 }
 
 #question {
@@ -148,6 +148,16 @@ header .icon-github {
   flex-wrap: wrap;
 }
 
+#about .flex-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+#skill .flex-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
 .flex-wrap-rev {
   display: flex;
   flex-wrap: wrap;
@@ -158,6 +168,7 @@ header .icon-github {
   }
 }
 
+/* --------------- */
 #work .flex-wrap {
   margin-bottom: 150px;
 }
@@ -174,11 +185,19 @@ header .icon-github {
     width: 100%;
   }
 }
-.flex-item-des {
-  padding-top: 30px;
-}
 .flex-item-des p {
   padding-bottom: 15px;
+  text-align: left;
+}
+@media only screen and (max-width: 599px) {
+  .flex-item-des p {
+    padding: 0 30px 15px;
+  }
+}
+.flex-item-des p.flex-item-ttl {
+  text-align: center;
+  text-decoration: underline;
+  padding-bottom: 0;
 }
 
 .work-item {
@@ -204,7 +223,7 @@ header .icon-github {
 }
 @media only screen and (max-width: 599px) {
   .about-des {
-    padding: 20px 50px 0px;
+    padding: 20px 20px 0px;
   }
 }
 
@@ -224,10 +243,12 @@ header .icon-github {
 .skill-des {
   text-align: left;
   padding: 20px 20px 0px;
+  margin: 0 auto;
+  max-width: 400px;
 }
 @media only screen and (max-width: 599px) {
   .skill-des {
-    padding: 20px 80px 0px;
+    padding: 20px 30px 0px;
   }
 }
 
