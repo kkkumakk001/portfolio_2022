@@ -132,7 +132,6 @@ header {
     }
 }
 #about {
-    // background-color: rgb(247, 247, 247);
     padding: 100px 30px 50px;
 }
 #work {
@@ -211,7 +210,7 @@ header {
         text-align: left;
         padding-top: 20px;
         @include media(spl) {
-            padding: 20px 20px 0px;
+            padding: 20px 0 0px;
         }
     }
 }
