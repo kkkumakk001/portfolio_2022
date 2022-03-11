@@ -182,7 +182,7 @@ header {
             padding-bottom: 15px;
             text-align: left;
             @include media(spl) {
-                padding: 0 30px 15px;
+                padding: 0 0 15px;
             }
         }
         & p.flex-item-ttl {

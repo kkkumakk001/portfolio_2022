@@ -191,7 +191,7 @@ header .icon-github {
 }
 @media only screen and (max-width: 599px) {
   .flex-item-des p {
-    padding: 0 30px 15px;
+    padding: 0 0 15px;
   }
 }
 .flex-item-des p.flex-item-ttl {
