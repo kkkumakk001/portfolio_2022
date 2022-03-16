@@ -77,9 +77,16 @@ p {
 .line5 {
   top: 11px;
 }
-.line_1,.line_2,.line_3, .line_4, .line_5{
+/* .line_1,.line_2,.line_3, .line_4, .line_5{
+  background: #000000;
+} */
+.line_1,.line_2,.line_3{
   background: #000000;
 }
+.line_4, .line_5 {
+  background: #fff;
+}
+
 .line_1, .line_2, .line_3 {
   opacity: 0;
 }

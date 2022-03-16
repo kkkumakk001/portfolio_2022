@@ -33,6 +33,7 @@
   display: none;
   cursor: pointer;
   color: #000;
+  text-align: left;
 }
 .accordion-content.is-open {
   display: block;

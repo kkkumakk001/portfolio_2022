@@ -61,7 +61,7 @@ const slideUp = (el, duration = 300) => {
     }, duration);
   };
   
-  const slideToggle = (el, duration = 600) => {
+  const slideToggle = (el, duration = 1000) => {
     if (window.getComputedStyle(el).display === "none") {
       return slideDown(el, duration);
     } else {
