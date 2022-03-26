@@ -12,7 +12,7 @@ $breakpoints: (
 
 header {
     position: fixed;
-    background-color: #fff;
+    // background-color: #fff;
     width: 100%;
     z-index: 10;
     nav#nav-menu-pc {
@@ -134,8 +134,9 @@ header {
     }
 }
 #about {
-    padding: 100px 30px 50px;
+    padding: 100px 30px 100px;
     background-color: #ffffff;
+    position: relative;
 }
 #skill {
     background-color: #f6f8fa;

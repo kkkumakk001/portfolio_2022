@@ -1,6 +1,5 @@
 header {
   position: fixed;
-  background-color: #fff;
   width: 100%;
   z-index: 10;
 }
@@ -127,8 +126,9 @@ header .icon-github {
 }
 
 #about {
-  padding: 100px 30px 50px;
+  padding: 100px 30px 100px;
   background-color: #ffffff;
+  position: relative;
 }
 
 #skill {
