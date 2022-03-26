@@ -135,21 +135,23 @@ header {
 }
 #about {
     padding: 100px 30px 50px;
+    background-color: #ffffff;
+}
+#skill {
     background-color: #f6f8fa;
 }
 #work {
-    background-color: #f6f8fa;
+    background-color: #ffffff;
     padding: 85px 50px 50px;
 }
 #question {
     height: 400px;
-    background-color: #red;
+    background-color: #f6f8fa;
     overflow: scroll;
 }
 #contact {
     padding-bottom: 30px;
     background-color: #000;
-    // background-color: #fff;
 }
 /* ------------- */
 .flex-wrap {
@@ -231,7 +233,7 @@ header {
         // padding: 20px 0 50px;
         padding: 20px 0 20px;
         margin-bottom: 20px;
-        background-color: #f6f8fa;
+        background-color: #ffffff;
         @include media(spl) {
             width: 100%;
             &:last:child {

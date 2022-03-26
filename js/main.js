@@ -124,17 +124,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
       navMenu.classList.toggle('in');
       document.getElementById('line1').classList.toggle('line_1');
       document.getElementById('line2').classList.toggle('line_2');
-      document.getElementById('line3').classList.toggle('line_3');
-      document.getElementById('line4').classList.toggle('line_4');
-      document.getElementById('line5').classList.toggle('line_5');
       // console.log('開く通ってる')
     } else if(e.target != navMenu && navMenu.classList.contains('in') == true) {
       navMenu.classList.remove('in');
       document.getElementById('line1').classList.toggle('line_1');
       document.getElementById('line2').classList.toggle('line_2');
-      document.getElementById('line3').classList.toggle('line_3');
-      document.getElementById('line4').classList.toggle('line_4');
-      document.getElementById('line5').classList.toggle('line_5');
       // console.log(e.target)
     }
   });

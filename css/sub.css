@@ -128,17 +128,21 @@ header .icon-github {
 
 #about {
   padding: 100px 30px 50px;
+  background-color: #ffffff;
+}
+
+#skill {
   background-color: #f6f8fa;
 }
 
 #work {
-  background-color: #f6f8fa;
+  background-color: #ffffff;
   padding: 85px 50px 50px;
 }
 
 #question {
   height: 400px;
-  background-color: #red;
+  background-color: #f6f8fa;
   overflow: scroll;
 }
 
@@ -238,7 +242,7 @@ header .icon-github {
   width: 47.5%;
   padding: 20px 0 20px;
   margin-bottom: 20px;
-  background-color: #f6f8fa;
+  background-color: #ffffff;
 }
 @media only screen and (max-width: 599px) {
   .skill-item {

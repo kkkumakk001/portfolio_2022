@@ -63,35 +63,21 @@ p {
   border-radius: 4px;
 }
 .line1 {
-  top: 6px;
+  top: 8px;
 }
 .line2 {
+  /* top: 11px; */
+  bottom: 8px;
+}
+.line_1,.line_2 {
+  background-color: #ffffff;
   top: 11px;
 }
-.line3 {
-  bottom: 6px;
+.line_1 {
+  transform: rotate(-135deg);
 }
-.line4 {
-  top: 11px;
-}
-.line5 {
-  top: 11px;
-}
-.line_1,.line_2,.line_3{
-  background: #000000;
-}
-.line_4, .line_5 {
-  background: #fff;
-}
-
-.line_1, .line_2, .line_3 {
-  opacity: 0;
-}
-.line_4 {
-  transform: rotate(-225deg);
-}
-.line_5 {
-  transform: rotate(225deg);
+.line_2 {
+  transform: rotate(135deg);
 }
 /* ----- */
 .shutter{
@@ -161,3 +147,4 @@ p {
             transform: perspective(800px) scale(1) rotateX(0);
   }
 }
+/* ----- */
