@@ -13,6 +13,6 @@
 ```
 ### 連絡先
 ```
-Gmail: kk.10.kuma.kk@gmail.com
+kk.10.kuma.kk@gmail.com
 ```
 
