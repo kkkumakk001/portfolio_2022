@@ -126,23 +126,32 @@ header .icon-github {
 }
 
 #about {
-  padding: 100px 30px 100px;
-  background-color: #ffffff;
   position: relative;
+  padding: 100px 30px 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  background-image: url(../img/the-polygon.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #skill {
-  background-color: #f6f8fa;
+  background-color: #ffffff;
 }
 
 #work {
-  background-color: #ffffff;
+  background-image: url(../img/blocktile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgba(255, 255, 255, 0.7);
+  background-blend-mode: lighten;
   padding: 85px 50px 50px;
 }
 
 #question {
   height: 400px;
-  background-color: #f6f8fa;
   overflow: scroll;
 }
 
@@ -243,6 +252,7 @@ header .icon-github {
   padding: 20px 0 20px;
   margin-bottom: 20px;
   background-color: #ffffff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 @media only screen and (max-width: 599px) {
   .skill-item {
