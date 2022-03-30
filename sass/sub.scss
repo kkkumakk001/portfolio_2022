@@ -142,6 +142,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
 }
 #skill {
     background-color: #ffffff;
@@ -151,13 +152,13 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color:rgba(255,255,255,0.7);
+    background-color:rgba(255,255,255,0.1);
     background-blend-mode:lighten;
+    background-position: center;
     padding: 85px 50px 50px;
 }
 #question {
     height: 400px;
-    // background-color: #f6f8fa;
     overflow: scroll;
 }
 #contact {
@@ -197,7 +198,7 @@ header {
     @include media(spl) {
         width: 100%;
     }
-    &-des {
+    &-wrap {
         & p {
             padding-bottom: 15px;
             text-align: left;

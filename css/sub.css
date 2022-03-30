@@ -134,6 +134,7 @@ header .icon-github {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
 }
 
 #skill {
@@ -145,8 +146,9 @@ header .icon-github {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.1);
   background-blend-mode: lighten;
+  background-position: center;
   padding: 85px 50px 50px;
 }
 
@@ -204,16 +206,16 @@ header .icon-github {
     width: 100%;
   }
 }
-.flex-item-des p {
+.flex-item-wrap p {
   padding-bottom: 15px;
   text-align: left;
 }
 @media only screen and (max-width: 599px) {
-  .flex-item-des p {
+  .flex-item-wrap p {
     padding: 0 0 15px;
   }
 }
-.flex-item-des p.flex-item-ttl {
+.flex-item-wrap p.flex-item-ttl {
   text-align: center;
   text-decoration: underline;
   padding-bottom: 0;
